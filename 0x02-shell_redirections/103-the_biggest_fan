@@ -1,0 +1,2 @@
+#!/bin/bash
+awk -F | sort | uniq -c | sort -rn | head -n 11
