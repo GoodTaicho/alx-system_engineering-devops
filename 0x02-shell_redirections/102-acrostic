@@ -1,2 +1,2 @@
 #!/bin/bash
-cat acrostic.txt | ./decode_acrostic.sh
+cut -c 1 | paste -s -d ''
