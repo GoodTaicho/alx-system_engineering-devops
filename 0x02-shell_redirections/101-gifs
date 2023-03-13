@@ -1,2 +1,14 @@
 #!/bin/bash
-find . -type f -iname '*.gif' -printf "%f\n" | sed 's/\.gif$//' | LC_ALL=C sort -f
+shopt -s nullglob
+
+for file in **/*.gif
+do
+	    if [[ -f "$file" ]]
+		        then
+				        name=${file##*/}
+					        name=${name%.*}
+						        echo "$name"
+							    fi
+						    done | LC_COLLATE=C sort -f | uniq
+
+						    echo
